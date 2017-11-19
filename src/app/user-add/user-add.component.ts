@@ -1,6 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { EventEmitter } from 'events';
 import { ContactService } from '../shared/contact.service';
 import { Contact } from '../shared/contact.model';
 
