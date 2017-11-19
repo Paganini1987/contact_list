@@ -30,7 +30,6 @@ export class UserAddComponent {
 
   addUser() {
     this.service.create(this.user);
-    console.log(this.service.getAll());
     this.closeModal();
   }
 

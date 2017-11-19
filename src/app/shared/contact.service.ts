@@ -4,10 +4,8 @@ import { Contact } from "./contact.model";
 @Injectable()
 export class ContactService {
 
-    id: number=1;
-    users: Contact[]=[
-        {id: 0, name: 'Иван', nick: 'ivan', lastName: 'Петров', sex: true, dateOfBirth: '13.12.2000', hairColor: 'ref', tags: ['велосипед', 'стрельба']}
-    ]
+    id: number=0;
+    users: Contact[]=[];
 
     getAll(): Contact[] {
         return this.users;
