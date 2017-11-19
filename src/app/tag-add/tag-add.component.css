@@ -1,0 +1,13 @@
+.modal {
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 135px;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -60px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow:  0 0 20px 0 rgba(0,0,0,0.3);
+}

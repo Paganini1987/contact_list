@@ -1,0 +1,32 @@
+<div class="modal">
+  <div class="form-group">
+    <label for="name">Имя</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="user.name">
+  </div>
+  <div class="form-group">
+    <label for="lastName">Фамилия</label>
+    <input type="text" class="form-control" id="lastName" [(ngModel)]="user.lastName">
+  </div>
+  <div class="form-group">
+    <label for="nick">Прозвище</label>
+    <input type="text" class="form-control" id="nick" [(ngModel)]="user.nick">
+  </div>
+  <div class="form-group">
+    <label for="sex">Пол</label>
+    <select class="form-control" id="sex" [(ngModel)]="user.sex">
+      <option value="true">Мужской</option>
+      <option value="false">Женский</option>
+    </select>
+  </div> 
+  <div class="form-group">
+    <label for="dateOfBirth">Дата рождения</label>
+    <input type="date" class="form-control" id="dateOfBirth" [(ngModel)]="user.dateOfBirth">
+  </div>
+  <div class="form-group">
+    <label for="hairColor">Цвет волос</label>
+    <input type="text" class="form-control" id="hairColor" [(ngModel)]="user.hairColor">
+  </div>
+  
+  <button (click)="closeModal()" class="btn btn-danger">Back</button>
+  <button (click)="addUser()" class="btn btn-success">AddUser</button>
+</div>

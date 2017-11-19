@@ -1,0 +1,10 @@
+<!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Сортировать: <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" (click)="addParam($event)">
+    <li data-sort="up">По возрастанию</li>
+    <li data-sort="down">По убыванию</li>
+  </ul>
+</div>

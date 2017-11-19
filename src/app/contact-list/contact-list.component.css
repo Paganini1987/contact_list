@@ -1,0 +1,87 @@
+.list-group {
+    min-height: 500px;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.list-group-item.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tags {
+    list-style-type: none;
+    min-width: 50%;
+    min-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.tags-top {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tags li, .tags-top li {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.tags-top li:hover:not(.header) {
+    cursor: pointer;
+}
+
+.tags li:hover:not(.header) {
+    cursor: pointer;
+}
+
+.add-tag {
+    margin-left: 10px;
+}
+
+.add-tag:hover {
+    cursor: pointer;
+}
+
+.user-nick {
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.user-tags {
+    margin-right: 10px
+}
+
+.remove-user-button, .edit-user-button {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -11px;
+    text-align: center;
+}
+
+.edit-user-button {
+    right: 40px;
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+    background: #5bc0de;
+    border-radius: 3px;
+}
+
+.my-pagination /deep/ .ngx-pagination {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}

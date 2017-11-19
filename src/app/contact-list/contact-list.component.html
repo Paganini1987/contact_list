@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Список контактов</div>
+  <div class="list-group-item header">
+    <app-sort (onSort)="updateUserList($event)"></app-sort>
+    <button (click)="addUser()" class="btn btn-success">Add+</button>
+  </div>
+  <div class="panel-body list-group-item">
+    <div class="user-tags">Tags:</div>
+    <ul class="tags-top" [dragula]='"bag-one"' [dragulaModel]='tags' [dragulaOptions]="options">
+      <li class="label label-primary" *ngFor="let tag of tags" [innerHtml]='tag'>{{ tag }}</li>
+    </ul>
+    <div class="add-tag label label-success" (click)="addTag()">+</div>
+  </div>
+  <div class="panel-body">
+    <ul class="list-group">
+  
+      <li class="list-group-item" *ngFor="let user of users | sort:param | paginate: { itemsPerPage: 9, currentPage: p }">
+        <span class="user-nick">{{ user.nick }}</span>
+        <span class="user-tags">Tags:</span>
+        <ul [dragula]='"bag-one"' [dragulaModel]='user.tags' class="tags" [dragulaOptions]="options">
+          <li class="label label-primary" *ngFor="let tag of user.tags" [innerHtml]='tag'>{{ tag }}</li>
+        </ul>
+        <button (click)="onEdit(user)" class="edit-user-button btn btn-warning btn-xs">R</button>
+        <button (click)="removeUser(user)" class="remove-user-button btn btn-danger btn-xs">X</button>
+      </li>
+    </ul>
+  </div>
+  <div class="panel-footer">
+    <pagination-controls class="my-pagination" (pageChange)="p =$event" previousLabel="Назад" nextLabel="Вперёд"></pagination-controls>
+  </div>
+</div>
+
+

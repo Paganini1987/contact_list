@@ -1,0 +1,9 @@
+<div class="modal">
+  <div class="form-group">
+    <label for="name">Tag</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="tag">
+  </div>
+  
+  <button (click)="closeModal()" class="btn btn-danger">Back</button>
+  <button (click)="addTag()" class="btn btn-success">AddTag</button>
+</div>

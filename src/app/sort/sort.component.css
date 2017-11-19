@@ -1,0 +1,11 @@
+li {
+    display: block;
+    padding: 10px;
+    transition: all 0.3s ease; 
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: #5bc0de;
+    color: white;
+}
